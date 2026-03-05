@@ -7,6 +7,8 @@
 **Teknoloji:** React (Vite) + Vanilla CSS
 **API Base URL:** `http://localhost:3000`
 
+![Proje Genel Görünümü](./public/1.png)
+
 ---
 
 ## 📡 API Endpoint'leri
@@ -329,6 +331,8 @@ src/
 │                                                  │
 │  Parçacıklı / paralax arka plan efekti           │
 └─────────────────────────────────────────────────┘
+
+![Hero Açılış Ekranı](./public/2.png)
 ```
 
 **Tasarım detayları:**
@@ -367,6 +371,8 @@ src/
 │  └─────────────────────────────────────────────┘   │
 │  (hover'da scale 1.02 + glow, tıklamada ripple)    │
 └────────────────────────────────────────────────────┘
+
+![Hesaplama Formu](./public/3.png)
 ```
 
 **UX Detayları:**
@@ -416,6 +422,8 @@ src/
 │  │  ₺ 1.961 ━━━━━━━━▓▓▓▓▓━━━━━━━━━ ₺ 2.833    │   │
 │  └──────────────────────────────────────────────┘   │
 └────────────────────────────────────────────────────┘
+
+![Sonuçlar](./public/5.png)
 ```
 
 **Tasarım detayları:**
@@ -444,6 +452,8 @@ src/
 │       ╰────────╯                     │
 │     Toplam: 2.201₺                   │
 └─────────────────────────────────────┘
+
+![Maliyet Dağılımı](./public/4.png)
 ```
 
 - Donut/pie chart: CSS-only veya lightweight chart library (Chart.js mini)
@@ -468,6 +478,8 @@ src/
 | Toll listesi | Accordion | Height 0 → auto / 0.3s |
 | Tooltip | Fade-in + scale | 0.2s |
 
+![Detaylar ve Etkileşimler](./public/6.png)
+
 ---
 
 ## 📱 Responsive Breakpoint'ler
@@ -486,6 +498,8 @@ src/
 | 480-768px | Tek kolon, padding artışı | Tek kolon + genişleme | Swap butonu yatay |
 | 768-1024px | İki kolon (nereden/nereye) | İki kolon grid | Yan yana kart |
 | > 1024px | Yatay form satırı | Üç kolon grid | Tam genişlik experience |
+
+![Mobil ve Responsive Tasarım](./public/7.png)
 
 ---
 
