@@ -1,4 +1,4 @@
-# 🚗 Yol Ne Kadar — Frontend Geliştirme Kılavuzu
+<img width="1919" height="910" alt="Ekran görüntüsü 2026-03-06 023053" src="https://github.com/user-attachments/assets/43792be1-707b-481d-9b71-5a163bba685d" /># 🚗 Yol Ne Kadar — Frontend Geliştirme Kılavuzu
 
 ## Proje Özeti
 
@@ -7,7 +7,7 @@
 **Teknoloji:** React (Vite) + Vanilla CSS
 **API Base URL:** `http://localhost:3000`
 
-![Proje Genel Görünümü](./public/1.png)
+<img width="1919" height="910" alt="Ekran görüntüsü 2026-03-06 023053" src="https://github.com/user-attachments/assets/a06a7b10-a2fd-4fb2-b46d-a4032d481382" />
 
 ---
 
