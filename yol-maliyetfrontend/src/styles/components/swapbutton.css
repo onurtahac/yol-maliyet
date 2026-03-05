@@ -1,0 +1,82 @@
+/* ═══════════════════════════════════════════════════════
+   SWAP BUTTON v5 — Ultra Responsive Layout
+   ═══════════════════════════════════════════════════════ */
+
+.swap-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0f0f1e;
+    border: 1px solid rgba(255, 77, 77, 0.4);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition-elite);
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+    /* Desktop Sidebar Position */
+    position: absolute;
+    right: 40px;
+    top: 101px;
+    transform: translateY(-50%);
+}
+
+.swap-button:hover {
+    background: #1a1a2e;
+    border-color: var(--color-primary);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.swap-button svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rotation logic handled purely by SVG to not mess with absolute positioning */
+.swap-button.is-rotated svg {
+    transform: rotate(180deg);
+}
+
+.swap-button:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+/* ── Responsive Tablet/Mobile ── */
+@media (max-width: 1024px) {
+    .swap-button {
+        position: absolute;
+        right: 20px;
+        top: 104px;
+        /* Centered in 28px gap */
+        /* Precision placement between triggers in mobile stack */
+        transform: translateY(-50%);
+        margin: 0;
+        background: #1a1a2e;
+        border-color: rgba(255, 77, 77, 0.6);
+        box-shadow: 0 0 25px rgba(255, 77, 77, 0.2);
+        z-index: 1001;
+    }
+
+    .swap-button svg {
+        transform: rotate(90deg);
+        /* Horizontal to Vertical conversion */
+    }
+
+    .swap-button.is-rotated svg {
+        transform: rotate(270deg);
+        /* Vertical flip state */
+    }
+
+    .swap-button:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .swap-button:active {
+        transform: translateY(-50%) scale(0.9);
+    }
+}

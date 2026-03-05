@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════════════════
+   BADGE v3 — Elite Indicators
+   ═══════════════════════════════════════════════════════ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    border: var(--border-glass);
+}
+
+.badge-fastest {
+    background: rgba(0, 242, 254, 0.1);
+    color: #4facfe;
+    border-color: rgba(79, 172, 254, 0.3);
+}
+
+.badge-cheapest {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.badge-alternative {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-secondary);
+}
+
+.badge-save {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.badge-icon {
+    font-size: 0.8rem;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(0.95);
+    }
+}
+
+.badge-pulse {
+    animation: badgePulse 2s infinite ease-in-out;
+}

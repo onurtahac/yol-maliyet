@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════════════
+   BUTTON v3 — Elite Controls
+   ═══════════════════════════════════════════════════════ */
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition-elite);
+    user-select: none;
+    border-radius: var(--radius-md);
+}
+
+.btn-primary {
+    background: var(--gradient-crimson);
+    color: white;
+    box-shadow: 0 15px 30px rgba(255, 65, 108, 0.25);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 65, 108, 0.35);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--color-text-secondary);
+    border: var(--border-glass);
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.btn-lg {
+    padding: 20px 48px;
+    font-size: 1rem;
+    border-radius: var(--radius-lg);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn:disabled {
+    opacity: 0.3;
+    filter: grayscale(1);
+    cursor: not-allowed;
+}

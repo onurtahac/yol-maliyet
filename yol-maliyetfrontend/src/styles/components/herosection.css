@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════════
+   HERO SECTION v4 — Sidebar Optimized
+   ═══════════════════════════════════════════════════════ */
+
+.hero-section {
+    padding: 40px 24px 20px;
+    text-align: left;
+    border-bottom: var(--border-glass);
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at top right, rgba(255, 77, 77, 0.05), transparent 70%);
+}
+
+.hero-content {
+    animation: slideInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-floating-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 10px rgba(255, 77, 77, 0.3));
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 950;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.hero-title-dot {
+    color: var(--color-primary);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Hide scroll prompt in sidebar */
+.hero-scroll,
+.hero-grid,
+.hero-road-line {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 60px 24px 30px;
+        text-align: center;
+    }
+}

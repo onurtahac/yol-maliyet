@@ -1,0 +1,79 @@
+/* ═══════════════════════════════════════════════════════
+   VEHICLE SELECTOR v4 — Sidebar Optimized
+   ═══════════════════════════════════════════════════════ */
+
+.vehicle-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vehicle-selector-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for sidebar */
+    gap: 8px;
+}
+
+.vehicle-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: var(--border-glass);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-elite);
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.vehicle-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.vehicle-card-selected {
+    background: rgba(255, 77, 77, 0.08);
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.1);
+}
+
+.vehicle-card-icon {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.vehicle-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
+
+.vehicle-card-selected .vehicle-card-label {
+    color: white;
+}
+
+/* ── Mobile Layout ── */
+@media (max-width: 1024px) {
+    .vehicle-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .vehicle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

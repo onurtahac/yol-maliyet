@@ -1,0 +1,123 @@
+/* ═══════════════════════════════════════════════════════
+   RESULTS PANEL v5 — Sidebar Optimized
+   ═══════════════════════════════════════════════════════ */
+
+.results-panel {
+    padding: 24px;
+    animation: slideInLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.results-header {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.results-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.results-arrow {
+    font-size: 0.8em;
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 8px var(--color-primary-glow));
+}
+
+.results-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: var(--border-glass);
+    border-radius: var(--radius-full);
+    width: fit-content;
+}
+
+.results-meta-item {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ── Sidebar Card List ── */
+.results-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.route-card-wrapper {
+    cursor: pointer;
+    transition: var(--transition-elite);
+    position: relative;
+    border-radius: var(--radius-lg);
+    width: 100%;
+}
+
+.route-card-wrapper:hover {
+    transform: translateX(4px);
+}
+
+.route-card-wrapper.active {
+    box-shadow: 0 0 30px rgba(6, 214, 160, 0.15);
+    background: rgba(6, 214, 160, 0.03);
+}
+
+.route-card-wrapper.active::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 10%;
+    bottom: 10%;
+    width: 4px;
+    background: #06d6a0;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #06d6a0;
+}
+
+/* ── States ── */
+.results-panel.loading {
+    padding: 40px;
+    gap: 20px;
+}
+
+.results-error {
+    padding: 32px;
+    text-align: center;
+}
+
+.results-error-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.results-error-text {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+}

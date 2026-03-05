@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════════════════
+   FOOTER v6 — Integrated Sidebar Footer
+   ═══════════════════════════════════════════════════════ */
+
+.footer {
+    padding: 40px 24px;
+    margin-top: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: var(--border-glass);
+}
+
+.footer-bar-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-logo {
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+}
+
+.footer-dot {
+    color: var(--color-primary);
+}
+
+.footer-tagline {
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+    line-height: 1.5;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.footer-disclaimer {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.15);
+    font-style: italic;
+    line-height: 1.5;
+}

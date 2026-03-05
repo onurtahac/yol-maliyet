@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════
+   ROUTE FORM v4 — Sidebar Optimized
+   ═══════════════════════════════════════════════════════ */
+
+.route-form-section {
+    padding: 24px;
+    border-bottom: var(--border-glass);
+}
+
+.route-form-container {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: var(--border-glass);
+    border-radius: var(--radius-xl);
+}
+
+.route-form-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.route-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.route-form-cities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* ── Form Group Styling ── */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ── Custom Select/Input Style (Global) ── */
+.form-input {
+    background: rgba(255, 255, 255, 0.03);
+    border: var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition-elite);
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 15px var(--color-primary-glow);
+}
+
+/* ── Submit Button Icon ── */
+.btn-calc-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+    .route-form-section {
+        padding: 20px;
+    }
+
+    .route-form-cities {
+        gap: 28px;
+    }
+}

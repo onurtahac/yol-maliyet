@@ -1,0 +1,290 @@
+/* ═══════════════════════════════════════════════════════
+   Yol Ne Kadar? — Keyframe Animations
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Fade In + Slide Up ── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ── Slide In from directions ── */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Skeleton Shimmer ── */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ── Pulse ── */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.85;
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--color-accent-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--color-accent-glow), 0 0 60px rgba(6, 214, 160, 0.15);
+    }
+}
+
+/* ── Bounce (scroll indicator) ── */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+
+    40% {
+        transform: translateY(-12px) translateX(-50%);
+    }
+
+    60% {
+        transform: translateY(-6px) translateX(-50%);
+    }
+}
+
+/* ── Rotate (swap button) ── */
+@keyframes rotate180 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* ── Ripple ── */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ── Width fill (cost bar) ── */
+@keyframes fillWidth {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--fill-width, 100%);
+    }
+}
+
+/* ── Counter number ── */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Donut chart draw ── */
+@keyframes drawDonut {
+    from {
+        stroke-dashoffset: var(--circumference, 283);
+    }
+
+    to {
+        stroke-dashoffset: var(--target-offset, 0);
+    }
+}
+
+/* ── Float (decorative) ── */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ── Glow ring ── */
+@keyframes glowRing {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px var(--color-accent-glow), inset 0 0 5px var(--color-accent-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--color-accent-glow), inset 0 0 10px var(--color-accent-glow);
+    }
+}
+
+/* ── Staggered entry helper ── */
+.stagger-1 {
+    animation-delay: 0ms;
+}
+
+.stagger-2 {
+    animation-delay: 100ms;
+}
+
+.stagger-3 {
+    animation-delay: 200ms;
+}
+
+.stagger-4 {
+    animation-delay: 300ms;
+}
+
+.stagger-5 {
+    animation-delay: 400ms;
+}
+
+/* ── Particle dots (hero background) ── */
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+
+    25% {
+        transform: translate(10px, -20px);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-5px, -40px);
+        opacity: 0.4;
+    }
+
+    75% {
+        transform: translate(15px, -20px);
+        opacity: 0.6;
+    }
+}
+
+/* ── Toast slide in ── */
+@keyframes toastSlideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toastSlideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* ── Accordion expand ── */
+@keyframes accordionOpen {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}

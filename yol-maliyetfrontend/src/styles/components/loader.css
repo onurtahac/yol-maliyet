@@ -1,0 +1,82 @@
+/* ── Loader / Skeleton v2 ── */
+.skeleton-loader {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.skeleton-card {
+    background: var(--gradient-card);
+    border: var(--border-glass);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 107, 107, 0.03) 50%,
+            transparent 100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skeleton-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.skeleton-badge {
+    width: 80px;
+    height: 24px;
+    border-radius: var(--border-radius-full);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.skeleton-line {
+    height: 14px;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 10px;
+}
+
+.skeleton-line-short {
+    width: 60%;
+}
+
+.skeleton-line-medium {
+    width: 80%;
+}
+
+.skeleton-line-long {
+    width: 100%;
+}
+
+.skeleton-stats {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.skeleton-stat {
+    width: 80px;
+    height: 36px;
+    border-radius: var(--border-radius-xs);
+    background: rgba(255, 255, 255, 0.03);
+}

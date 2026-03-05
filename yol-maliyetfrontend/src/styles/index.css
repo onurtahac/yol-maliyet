@@ -1,0 +1,236 @@
+/* ═══════════════════════════════════════════════════════
+   🌌 YOL NE KADAR? — SUPREME MIDNIGHT LUXURY v4.0 (DASHBOARD)
+   The Elite Dashboard Redesign — Eliminating Scroll Bloat
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* ── Essential Midnight Palette ── */
+  --color-bg-base: #020205;
+  --color-bg-deep: #050508;
+  --color-bg-card: rgba(15, 15, 30, 0.4);
+  --color-bg-glass: rgba(20, 20, 40, 0.55);
+
+  /* ── Refined Luxury Accents ── */
+  --color-primary: #ff4d4d;
+  --color-primary-glow: rgba(255, 77, 77, 0.25);
+  --color-gold: #d4af37;
+  --color-gold-glow: rgba(212, 175, 55, 0.15);
+
+  /* ── Advanced Typography ── */
+  --color-text-main: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-dim: rgba(255, 255, 255, 0.45);
+
+  /* ── Master Gradients ── */
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f9f295 50%, #d4af37 100%);
+  --gradient-crimson: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  --gradient-midnight: radial-gradient(circle at top right, rgba(255, 77, 77, 0.08), transparent 45%),
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.05), transparent 45%),
+    radial-gradient(circle at center, rgba(15, 15, 35, 1), #020205);
+
+  /* ── High-Precision Tokens ── */
+  --border-glass: 1px solid rgba(255, 255, 255, 0.06);
+  --border-glass-strong: 1px solid rgba(255, 255, 255, 0.12);
+  --radius-xl: 32px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ── Tactical Elevations ── */
+  --shadow-supreme: 0 30px 60px rgba(0, 0, 0, 0.9);
+  --transition-elite: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --sidebar-width: 440px;
+  --header-height: 72px;
+  --footer-height: 48px;
+
+  /* Legacy Compat */
+  --color-accent: var(--color-primary);
+  --color-text-primary: var(--color-text-main);
+  --color-bg-secondary: var(--color-bg-card);
+  --gradient-card: var(--color-bg-card);
+  --gradient-primary: var(--gradient-crimson);
+  --border-radius-lg: var(--radius-xl);
+  --border-radius-md: var(--radius-lg);
+  --border-radius-sm: var(--radius-md);
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BASE RESET & GLOBALS
+   ═══════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-body);
+  background: var(--color-bg-base);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--gradient-midnight);
+  z-index: -1;
+}
+
+/* ═══════════════════════════════════════════════════════
+   DASHBOARD LAYOUT (ADVANCED ARCHITECTURE)
+   ═══════════════════════════════════════════════════════ */
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.main-dashboard {
+  display: flex;
+  flex: 1;
+  position: relative;
+  margin-top: var(--header-height);
+  overflow: hidden;
+}
+
+.mobile-footer {
+  display: none;
+}
+
+/* sidebar: Control & Results Panel */
+.dashboard-sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  background: rgba(2, 2, 5, 0.4);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-right: var(--border-glass);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  position: relative;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-bg-glass) transparent;
+}
+
+.dashboard-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dashboard-sidebar::-webkit-scrollbar-thumb {
+  background: var(--color-bg-glass);
+  border-radius: 10px;
+}
+
+/* map area */
+.dashboard-map-area {
+  flex: 1;
+  height: calc(100vh - var(--header-height));
+  position: sticky;
+  top: var(--header-height);
+  background: #0a0e1a;
+}
+
+/* ═══════════════════════════════════════════════════════
+   COMMON COMPONENTS
+   ═══════════════════════════════════════════════════════ */
+
+.glass-card {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: var(--border-glass);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-supreme);
+}
+
+.elite-button {
+  background: var(--gradient-crimson);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: var(--transition-elite);
+  box-shadow: 0 10px 20px rgba(255, 77, 77, 0.2);
+}
+
+.elite-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 77, 77, 0.4);
+}
+
+.elite-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+/* ── Responsive Mobile ── */
+@media (max-width: 1024px) {
+
+  html,
+  body {
+    overflow: auto;
+    /* Fallback to scroll on mobile */
+  }
+
+  .main-dashboard {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .desktop-footer {
+    display: none;
+  }
+
+  .mobile-footer {
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: var(--border-glass);
+    padding: 32px 24px;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-right: none;
+    border-top: var(--border-glass);
+    overflow-y: visible;
+  }
+
+  .dashboard-map-area {
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+    position: relative;
+    top: auto;
+  }
+}

@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════
+   COST BREAKDOWN v4 — Sidebar Optimized (Vertical)
+   ═══════════════════════════════════════════════════════ */
+
+.cost-breakdown {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: var(--border-glass);
+    border-radius: var(--radius-lg);
+}
+
+.cost-breakdown-title {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+}
+
+.cost-breakdown-content {
+    display: flex;
+    flex-direction: column;
+    /* Vertical for sidebar */
+    align-items: center;
+    gap: 24px;
+}
+
+.cost-breakdown-chart {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+
+.donut-total-label {
+    fill: var(--color-text-dim);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.donut-total-value {
+    fill: white;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.cost-breakdown-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cost-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    border: var(--border-glass);
+}
+
+.cost-legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.cost-legend-fuel {
+    background: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.cost-legend-toll {
+    background: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+}
+
+.cost-legend-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.cost-legend-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+}
+
+.cost-legend-value {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+}
+
+.cost-legend-percent {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
