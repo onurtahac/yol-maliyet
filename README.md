@@ -1,7 +1,3 @@
-<img width="1919" height="910" alt="Ekran görüntüsü 2026-03-06 023053" src="https://github.com/user-attachments/assets/43792be1-707b-481d-9b71-5a163bba685d" /># 🚗 Yol Ne Kadar — Frontend Geliştirme Kılavuzu
-
-## Proje Özeti
-
 **"Yol Ne Kadar?"** — Türkiye'deki ücretli otoyol, köprü ve tünel geçiş ücretlerini + yakıt maliyetini hesaplayan modern bir web uygulaması. Kullanıcı nereden nereye gideceğini, araç tipini, yakıt türünü ve tüketimini girer; uygulama **alternatif rotalarla birlikte toplam yol maliyetini** gösterir.
 
 **Teknoloji:** React (Vite) + Vanilla CSS
@@ -332,7 +328,10 @@ src/
 │  Parçacıklı / paralax arka plan efekti           │
 └─────────────────────────────────────────────────┘
 
-![Hero Açılış Ekranı](./public/2.png)
+
+<img width="1919" height="911" alt="Ekran görüntüsü 2026-03-06 023202" src="https://github.com/user-attachments/assets/5e4fc250-d663-457e-ace9-ce7a1dc55a7c" />
+
+
 ```
 
 **Tasarım detayları:**
@@ -371,8 +370,9 @@ src/
 │  └─────────────────────────────────────────────┘   │
 │  (hover'da scale 1.02 + glow, tıklamada ripple)    │
 └────────────────────────────────────────────────────┘
+<img width="1919" height="911" alt="Ekran görüntüsü 2026-03-06 023222" src="https://github.com/user-attachments/assets/2ca3f91e-6b3e-41b5-bf3e-d7d8bc3d503b" />
+<img width="365" height="261" alt="Ekran görüntüsü 2026-03-06 023238" src="https://github.com/user-attachments/assets/c7f016f7-61e8-4246-9288-41eda2fc9f58" />
 
-![Hesaplama Formu](./public/3.png)
 ```
 
 **UX Detayları:**
@@ -423,7 +423,12 @@ src/
 │  └──────────────────────────────────────────────┘   │
 └────────────────────────────────────────────────────┘
 
-![Sonuçlar](./public/5.png)
+<img width="1919" height="910" alt="Ekran görüntüsü 2026-03-06 023325" src="https://github.com/user-attachments/assets/61341bad-f7e5-4f28-b209-a4900041600e" />
+
+<img width="359" height="260" alt="Ekran görüntüsü 2026-03-06 023344" src="https://github.com/user-attachments/assets/6cbe3f19-8a50-48d0-96c7-9589c071cc92" />
+
+<img width="1919" height="909" alt="Ekran görüntüsü 2026-03-06 023312" src="https://github.com/user-attachments/assets/14d4cee1-49f3-4fa8-82df-f88e05144c9c" />
+
 ```
 
 **Tasarım detayları:**
@@ -453,7 +458,6 @@ src/
 │     Toplam: 2.201₺                   │
 └─────────────────────────────────────┘
 
-![Maliyet Dağılımı](./public/4.png)
 ```
 
 - Donut/pie chart: CSS-only veya lightweight chart library (Chart.js mini)
@@ -478,7 +482,6 @@ src/
 | Toll listesi | Accordion | Height 0 → auto / 0.3s |
 | Tooltip | Fade-in + scale | 0.2s |
 
-![Detaylar ve Etkileşimler](./public/6.png)
 
 ---
 
